@@ -1,0 +1,29 @@
+<div class="flex justify-between ph1   flex-row-ns ph2-ns   ph4-l">
+    <div class="w-third">
+        <div class="border-box flex flex-cell items-stretch justify-center pa1   pa2-ns">
+            <div class="bg-black-04 flex items-center justify-center pa2   pa3-46">
+                <a class="db zoom-in" href="#" data-featherlight="{{ include.image_one_large }}" data-featherlight-close-on-click="anywhere" data-featherlight-close-speed="350" data-featherlight-open-speed="350">
+                    <img class="db" src="{{ include.image_one_small }}">
+                </a>
+            </div>
+        </div>
+        <div class="border-box flex flex-cell items-stretch justify-center pa1   pa2-ns">
+            <div class="bg-black-04 flex items-center justify-center pa2   pa3-46">
+                {% if include.image_two_large %}
+                <a class="db zoom-in" href="#" data-featherlight="{{ include.image_two_large }}" data-featherlight-close-on-click="anywhere" data-featherlight-close-speed="350" data-featherlight-open-speed="350">
+                    <img class="db" src="{{ include.image_two_small }}">
+                </a>
+                {% else %}
+                <img class="db" src="{{ include.image_two_small }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="border-box flex flex-cell items-stretch justify-center pa1 w-two-thirds   pa2-ns">
+        <div class="bg-black-04  flex items-center justify-center pa2   pa3-46">
+            <a class="db zoom-in" href="#" data-featherlight="{{ include.image_three_large }}" data-featherlight-close-on-click="anywhere" data-featherlight-close-speed="350">
+                <img class="db" src="{{ include.image_three_small }}">
+            </a>
+        </div>
+    </div>
+</div>
