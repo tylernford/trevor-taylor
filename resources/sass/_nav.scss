@@ -1,0 +1,189 @@
+//
+// Nav
+//
+
+.site-menu__btn {
+   @apply
+      flex flex-wrap justify-end
+      -mr-1 py-2 px-1;
+
+   &:hover {
+      span {
+         @apply bg-gray-600
+      }
+   }
+
+   span {
+      @apply
+         bg-black
+         h-px
+         mb-1
+   }
+}
+
+.site-menu__container {
+   @apply absolute invisible inset-0 z-50;
+
+   // Opacity Overlay
+   .site-menu__overlay {
+      @apply fixed bg-white inset-0 opacity-0;
+      @apply timing-1 duration-5 property-all;
+   }
+
+   svg {
+      @apply opacity-0
+   }
+
+   // Menu Wrapper
+   .site-menu__wrapper {
+      @apply flex justify-end fixed inset-0 z-40;
+      @apply translateX-100per timing-1 duration-5 property-all;
+   }
+
+   // When Visible
+   &.--is-visible {
+      @apply visible;
+
+      // Opacity Overlay
+      .site-menu__overlay {
+         @apply opacity-75;
+         @apply timing-1 duration-4 property-all;
+      }
+
+      svg {
+         @apply opacity-100;
+         @apply timing-1 duration-5 property-all;
+      }
+
+      // Menu Wrapper
+      .site-menu__wrapper {
+         @apply translateX-0per timing-1 duration-4 property-all;
+      }
+   }
+}
+
+
+.site-menu__wrapper {
+   // Site Menu
+   .site-menu {
+      @apply
+         relative
+         flex flex-col justify-center
+         h-full w-full
+         py-8 px-8
+         shadow-xl;
+
+      @screen sm {
+         @apply
+            justify-start
+            px-16;
+         max-width: 30rem
+      }
+
+      @screen md {
+         @apply block pr-16 pt-32;
+         max-width: 34rem
+      }
+
+      // Close Button
+      button {
+         @apply absolute;
+
+         right: 2rem;
+         top: 2rem;
+
+         @screen md {
+            right: 4rem;
+            top: 3.5rem
+         }
+
+         &:hover {
+            @apply opacity-50
+         }
+      }
+
+      // Menu
+      .site-menu__list {
+         @apply
+            border-b border-black
+            w-full
+            pb-8;
+
+         // Menu Item
+         .site-menu__item {
+            @apply
+               font-serif text-3xl tracking-wide;
+
+            @screen sm {
+               @apply
+                  text-4xl
+                  py-2
+            }
+
+            a {
+               &:hover {
+                  @apply text-black opacity-75
+               }
+
+               &:after {
+                  content: '→';
+                  @apply
+                     invisible opacity-0
+                     font-serif text-4xl
+                     ml-1;
+               }
+
+               &:hover {
+                  &:after {
+                     @apply
+                     ml-4
+                        visible opacity-100
+                        timing-1 duration-3 property-margin;
+                  }
+               }
+            }
+         }
+      }
+
+      a {
+         &:hover {
+            @apply
+               text-black
+               opacity-50
+         }
+      }
+   }
+
+   // Colors
+   .site-menu {
+      background-color: #e5e1dc;
+      border-left: 1px solid rgb(240,240,240);
+
+      &.--processes {
+         @apply bg-yellow-base
+      }
+
+      &.--development {
+         @apply bg-blue-base
+      }
+
+      &.--design {
+         @apply bg-orange-base
+      }
+
+      &.--innovation {
+         @apply bg-green-base
+      }
+      /*
+      //blue-background-color: #6ca3e6;
+      //red-background-color: #e4534c;
+      //yellow-background-color: #f5b63f;
+      //green-background-color: #63a87e;
+
+
+      @apply bg-yellow-400;
+      @apply bg-blue-400;
+      @apply bg-teal-400;
+      */
+   }
+}

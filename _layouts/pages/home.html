@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<div class="container">
+   <div class="index-list  |  mb-12">
+      <h1 class="font-serif text-3xl sm:text-4xl tracking-wide  |  mb-12">{{ content }}</h1>
+      {% assign index = site.pages | sort: "order"%}
+      {% for page in index %}
+         {% unless page.title == 'Index' %}
+            <a href="{{ page.url | prepend: site.baseurl }}" class="index-list__item">
+               <div class="index-list__item__indicator --{{ page.title | downcase }}"></div>
+               <span>{{ page.title }}</span>
+            </a>
+         {% endunless %}
+      {% endfor %}
+   </div>
+</div>
+
+<div class="container  |  mb-40 pb-24 pt-40">
+   <h2 class="font-500 text-3fxl  uppercase  |  mb-2" style="letter-spacing: 0.0125em">About</h2>
+   <div class="block__two-column">
+      <p>Over the last ten years I have worked to cultivate a rich understanding of informal pedagogies and an in-depth knowledge of science exhibits as an interpretive media. I am currently investigating the relationships between staffed experiences and exhibits to better understand what kinds of experiences may occur at their intersection.</p>
+      <p>My greatest strengths lie in ideation and prototyping. I have accumulated a number of making skills over the years but am always learning more. I have used these skills to help museums all over the central region of the United States generate powerful, mission–driven experiences for their visitors.</p>
+   </div>
+</div>
+
+   <!--<div class="max-w-5xl w-full mx-auto">-->
+   <div class="container">
+      <div class="flex sm:justify-between  |  mb-16 lg:mb-32">
+         <div class="flex flex-col  |  -ml-6 sm:-ml-8 md:ml-0 lg:-ml-32">
+            <div class="h-1/2 w-6 sm:w-16 lg:w-32  |  border-b border-r border-black"  style="height: 50%"></div>
+            <div class="h-1/2 w-6 sm:w-16 lg:w-32  |  border-r border-black"  style="height: 50%"></div>
+         </div>
+
+         <div class="pl-4 py-8 sm:px-8 md:px-16 lg:pr-0  |  sm:text-right">
+            <h2 class="font-500 leading-none uppercase text-sm sm:text-base  |  mb-4 sm:pr-4 lg:pr-0">Education</h2>
+            <p class="leading-tight text-sm sm:text-base  |  mb-4">
+               <span class="font-500">2017<br>
+               MFA, Museum Exhibition Planning and Design</span><br>
+               The University of the Arts, Philadelphia, PA
+            </p>
+            <p class="leading-tight text-sm sm:text-base  |  mb-0">
+               <span class="font-500">2012<br>
+               BA, Music Performance</span><br>
+               Oklahoma State University, Stillwater, OK
+            </p>
+         </div>
+      </div>
+
+      <div class="flex justify-between  |  mb-16 lg:mb-32">
+         <div class="pr-4 py-8 sm:px-8 md:px-16 lg:pl-0">
+            <h2 class="font-500 leading-none uppercase text-sm sm:text-base  |  mb-4">Experience</h2>
+            <p class="leading-tight text-sm sm:text-base  |  mb-4">
+               <span class="font-500">
+                  2018–2019<br>
+                  Exhibit Developer
+               </span>
+               <br>
+               Boston Children's Museum
+            </p>
+            <p class="leading-tight text-sm sm:text-base  |  mb-4">
+               <span class="font-500">
+                   2012–2015<br>
+                   Network Museum Educator
+                </span>
+                <br>
+                Oklahoma Museum Network
+            </p>
+            <p class="leading-tight text-sm sm:text-base  |  mb-4">
+               <span class="font-500">
+                  2011–2012<br>
+                  Curator of Galleries
+               </span>
+               <br>
+               Science Museum Oklahoma
+            </p>
+            <p class="leading-tight text-sm sm:text-base  |  mb-0">
+               <span class="font-500">
+                   2009–2011<br>
+                   Camp Educator
+                </span><br>
+                Science Museum Oklahoma
+            </p>
+         </div>
+
+         <div class="flex flex-col  |  -mr-6 sm:-mr-8 md:mr-0 lg:-mr-32">
+            <div class="w-6 sm:w-16 lg:w-32  |  border-b border-l border-black" style="height: 50%"></div>
+            <div class="w-6 sm:w-16 lg:w-32  |  border-l border-black" style="height: 50%"></div>
+         </div>
+      </div>
+   </div>
+</div>

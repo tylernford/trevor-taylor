@@ -1,4 +1,0 @@
----
-title: Innovation
-layout: innovation
----

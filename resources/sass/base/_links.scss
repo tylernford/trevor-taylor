@@ -1,0 +1,11 @@
+//
+// Links
+//
+
+a {
+   @apply timing-1 duration-1 property-all;
+
+   &:hover {
+      @apply text-gray-600
+   }
+}

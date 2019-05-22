@@ -1,4 +1,0 @@
----
-title: Processes
-layout: processes
----

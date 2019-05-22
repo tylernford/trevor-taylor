@@ -1,0 +1,15 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+// Base
+@import 'base/grid';
+@import 'base/transitions';
+@import 'base/links';
+@import 'base/buttons';
+
+@import 'fonts';
+@import 'index';
+@import 'nav';

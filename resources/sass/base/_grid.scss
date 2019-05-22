@@ -1,0 +1,36 @@
+//
+// Grid
+//
+
+.container {
+   @apply
+      max-w-4xl w-full
+      mx-auto px-6;
+
+   @screen sm {
+      @apply px-8
+   }
+
+   @screen md {
+      @apply px-12
+   }
+
+   &.--large {
+
+   }
+}
+
+.block__two-column {
+   p {
+      @apply mb-4;
+
+      &:last-child {
+         @apply mb-0
+      }
+   }
+
+   @screen sm {
+      column-count: 2;
+      column-gap: 48px
+   }
+}
