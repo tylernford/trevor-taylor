@@ -8034,9 +8034,9 @@ a {
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
-  -webkit-transition-duration: 0.15s;
-       -o-transition-duration: 0.15s;
-          transition-duration: 0.15s;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
@@ -8050,9 +8050,9 @@ button {
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
-  -webkit-transition-duration: 0.15s;
-       -o-transition-duration: 0.15s;
-          transition-duration: 0.15s;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
@@ -8282,15 +8282,28 @@ button:focus, button:active {
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
-  -webkit-transition-duration: 0.75s;
-       -o-transition-duration: 0.75s;
-          transition-duration: 0.75s;
+  -webkit-transition-duration: 0.6s;
+       -o-transition-duration: 0.6s;
+          transition-duration: 0.6s;
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 1.5s;
-       -o-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+}
+
+@media (min-width: 640px) {
+  .site-menu__container .site-menu__overlay {
+    -webkit-transition-duration: 0.75s;
+         -o-transition-duration: 0.75s;
+            transition-duration: 0.75s;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-menu__container .site-menu__overlay {
+    -webkit-transition-duration: 1.5s;
+         -o-transition-duration: 1.5s;
+            transition-duration: 1.5s;
+  }
 }
 
 .site-menu__container svg {
@@ -8319,15 +8332,28 @@ button:focus, button:active {
   -webkit-transition-timing-function: ease;
        -o-transition-timing-function: ease;
           transition-timing-function: ease;
-  -webkit-transition-duration: 0.75s;
-       -o-transition-duration: 0.75s;
-          transition-duration: 0.75s;
+  -webkit-transition-duration: 0.6s;
+       -o-transition-duration: 0.6s;
+          transition-duration: 0.6s;
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 1.5s;
-       -o-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+}
+
+@media (min-width: 640px) {
+  .site-menu__container .site-menu__wrapper {
+    -webkit-transition-duration: 0.75s;
+         -o-transition-duration: 0.75s;
+            transition-duration: 0.75s;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-menu__container .site-menu__wrapper {
+    -webkit-transition-duration: 1.5s;
+         -o-transition-duration: 1.5s;
+            transition-duration: 1.5s;
+  }
 }
 
 .site-menu__container.\--is-visible {
@@ -8373,6 +8399,21 @@ button:focus, button:active {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
+}
+
+.site-menu__container svg {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .site-menu__container svg {
+    position: fixed;
+    display: block;
+    height: 64px;
+    width: 40px;
+    bottom: 48px;
+    left: 48px;
+  }
 }
 
 .site-menu__wrapper .site-menu {
@@ -8482,6 +8523,20 @@ button:focus, button:active {
 .site-menu__wrapper .site-menu a:hover {
   color: #000;
   opacity: 0.5;
+}
+
+.site-menu__wrapper .site-menu svg {
+  position: absolute;
+  display: block;
+  bottom: 48px;
+  height: 57px;
+  width: 36px;
+}
+
+@media (min-width: 640px) {
+  .site-menu__wrapper .site-menu svg {
+    display: none;
+  }
 }
 
 .site-menu__wrapper .site-menu {
