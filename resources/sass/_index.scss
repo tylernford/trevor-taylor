@@ -2,7 +2,7 @@
 // Index List Hover
 //
 
-.index-list {
+.page-header {
    margin-top: 9rem;
 
    @screen sm {
@@ -12,7 +12,9 @@
    @screen md {
       margin-top: 222px
    }
+}
 
+.index-list {
    .index-list__item {
       @apply
          flex items-center

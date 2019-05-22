@@ -8072,18 +8072,18 @@ button:focus, button:active {
   font-style: normal;
 }
 
-.index-list {
+.page-header {
   margin-top: 9rem;
 }
 
 @media (min-width: 640px) {
-  .index-list {
+  .page-header {
     margin-top: 190px;
   }
 }
 
 @media (min-width: 768px) {
-  .index-list {
+  .page-header {
     margin-top: 222px;
   }
 }
@@ -8288,10 +8288,16 @@ button:focus, button:active {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
+  -webkit-transition-duration: 1.5s;
+       -o-transition-duration: 1.5s;
+          transition-duration: 1.5s;
 }
 
 .site-menu__container svg {
   opacity: 0;
+  -webkit-transition-duration: 0.45s;
+       -o-transition-duration: 0.45s;
+          transition-duration: 0.45s;
 }
 
 .site-menu__container .site-menu__wrapper {
@@ -8319,6 +8325,9 @@ button:focus, button:active {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
+  -webkit-transition-duration: 1.5s;
+       -o-transition-duration: 1.5s;
+          transition-duration: 1.5s;
 }
 
 .site-menu__container.\--is-visible {
@@ -8375,13 +8384,13 @@ button:focus, button:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 100%;
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -8390,9 +8399,7 @@ button:focus, button:active {
 
 @media (min-width: 640px) {
   .site-menu__wrapper .site-menu {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    padding-top: 8rem;
     padding-left: 4rem;
     padding-right: 4rem;
     max-width: 30rem;
@@ -8401,9 +8408,6 @@ button:focus, button:active {
 
 @media (min-width: 768px) {
   .site-menu__wrapper .site-menu {
-    display: block;
-    padding-right: 4rem;
-    padding-top: 8rem;
     max-width: 34rem;
   }
 }

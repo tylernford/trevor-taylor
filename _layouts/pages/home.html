@@ -3,8 +3,11 @@ layout: default
 ---
 
 <div class="container">
-   <div class="index-list  |  mb-12">
+   <header class="page-header">
       <h1 class="font-serif text-3xl sm:text-4xl tracking-wide  |  mb-12">{{ content }}</h1>
+   </header>
+
+   <div class="index-list  |  mb-12">
       {% assign index = site.pages | sort: "order"%}
       {% for page in index %}
          {% unless page.title == 'Index' %}
@@ -17,7 +20,7 @@ layout: default
    </div>
 </div>
 
-<div class="container  |  mb-40 pb-24 pt-40">
+<div class="container  |  mb-32 pt-40">
    <h2 class="font-500 text-3fxl  uppercase  |  mb-2" style="letter-spacing: 0.0125em">About</h2>
    <div class="block__two-column">
       <p>Over the last ten years I have worked to cultivate a rich understanding of informal pedagogies and an in-depth knowledge of science exhibits as an interpretive media. I am currently investigating the relationships between staffed experiences and exhibits to better understand what kinds of experiences may occur at their intersection.</p>
@@ -48,7 +51,7 @@ layout: default
          </div>
       </div>
 
-      <div class="flex justify-between  |  mb-16 lg:mb-32">
+      <div class="flex justify-between  |  mb-16 lg:mb-48">
          <div class="pr-4 py-8 sm:px-8 md:px-16 lg:pl-0">
             <h2 class="font-500 leading-none uppercase text-sm sm:text-base  |  mb-4">Experience</h2>
             <p class="leading-tight text-sm sm:text-base  |  mb-4">
