@@ -38,7 +38,11 @@
          }
 
          &:nth-child(2) {
-            @apply flex-col
+            @apply flex-col;
+
+            @screen sm {
+               @apply flex-row
+            }
          }
       }
    }
