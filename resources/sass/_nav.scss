@@ -101,9 +101,10 @@
    .site-menu {
       @apply
          relative
+         overflow-scroll
          flex flex-col justify-start
          h-full w-full
-         py-20 px-8
+         pt-20 pb-8 px-8
          shadow-xl;
 
       @screen sm {
@@ -185,11 +186,17 @@
 
       svg {
          @apply
-            absolute
             block;
-         bottom: 48px;
+            flex-shrink:0;
          height: 57px;
          width: 36px;
+
+         @media screen and (min-height: 672px) {
+            @apply absolute;
+            bottom: 48px;
+            height: 57px;
+            width: 36px;
+         }
 
          @screen sm {
             @apply hidden
@@ -199,9 +206,10 @@
 
    // Colors
    .site-menu {
-      background-color: #e5e1dc;
-      border-left: 1px solid rgb(240,240,240);
-
+      &.--index {
+         background-color: #e5e1dc;
+         border-left: 1px solid #e2ded9;
+      }
       &.--processes {
          @apply bg-yellow-base
       }
@@ -217,16 +225,5 @@
       &.--innovation {
          @apply bg-green-base
       }
-      /*
-      //blue-background-color: #6ca3e6;
-      //red-background-color: #e4534c;
-      //yellow-background-color: #f5b63f;
-      //green-background-color: #63a87e;
-
-
-      @apply bg-yellow-400;
-      @apply bg-blue-400;
-      @apply bg-teal-400;
-      */
    }
 }

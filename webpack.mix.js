@@ -14,8 +14,9 @@ mix.sass('resources/sass/app.scss', 'assets/css/app.css')
          }
       },
    })
-   .copyDirectory('resources/fonts', 'assets/fonts')
    .copyDirectory('resources/js', 'assets/js')
+   .copyDirectory('resources/fonts', 'assets/fonts')
+   .copyDirectory('resources/img', 'assets/img')
    //.js([
    //   'js/app.js',
    //], 'js/app.min.js');

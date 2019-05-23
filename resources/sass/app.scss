@@ -9,7 +9,11 @@
 @import 'base/transitions';
 @import 'base/links';
 @import 'base/buttons';
+@import 'base/fonts';
 
-@import 'fonts';
+// Components
+@import 'components/image-grid';
+
+
 @import 'index';
 @import 'nav';

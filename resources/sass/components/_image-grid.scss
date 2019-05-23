@@ -1,0 +1,45 @@
+//
+// Image Grid
+//
+
+.image-grid {
+   @apply pt-20 pb-24;
+
+   @screen sm {
+      @apply pt-30 pb-32
+   }
+
+   .image-grid__heading {
+      @apply
+         font-500 tracking-wide uppercase
+         mb-4;
+
+      @screen sm {
+         @apply mb-8
+      }
+   }
+
+   .container.--large {
+      @apply -my-1;
+
+      @screen sm {
+         @apply -my-2
+      }
+
+      .image-grid__group {
+         @apply
+            flex flex-col-reverse
+            -mx-1;
+
+         @screen sm {
+            @apply
+               flex-row
+               -mx-2
+         }
+
+         &:nth-child(2) {
+            @apply flex-col
+         }
+      }
+   }
+}

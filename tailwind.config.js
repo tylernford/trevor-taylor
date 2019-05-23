@@ -145,6 +145,7 @@ module.exports = {
       '16': '4rem',
       '20': '5rem',
       '24': '6rem',
+      '30': '7.5rem',
       '32': '8rem',
       '40': '10rem',
       '48': '12rem',
@@ -329,7 +330,7 @@ module.exports = {
       '3xl': '48rem',
       '4xl': '54rem',
       '5xl': '64rem',
-      '6xl': '72rem',
+      '6xl': '70rem',
       full: '100%',
     },
     minHeight: {
