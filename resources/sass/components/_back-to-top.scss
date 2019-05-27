@@ -1,0 +1,87 @@
+//
+// Back to Top
+//
+
+.back-to-top {
+   @apply
+      fixed
+      w-full
+      bottom-0
+      mb-7
+      pointer-events-none;
+
+   @screen sm {
+      @apply mb-8
+   }
+
+   @screen md {
+      @apply mb-12
+   }
+
+   div {
+      @apply flex justify-end;
+
+      .back-to-top__wrapper {
+         @apply flex items-center justify-center;
+
+         height: 44px;
+         width: 44px;
+
+         margin-right: -2px;
+
+         @screen sm {
+            height: 48px;
+            width: 48px
+         }
+
+         .back-to-top__btn {
+            @apply
+               flex items-center justify-center
+               bg-black
+               text-white
+               rounded-full
+               timing-1 duration-3 property-all
+               pointer-events-auto;
+
+            height: 0;
+            width: 0;
+
+            &:hover {
+               @apply bg-gray-900
+            }
+
+            svg {
+               @apply
+                  stroke-current
+                  h-0 w-0
+                  timing-1 duration-3 property-all;
+            }
+
+
+            @apply invisible opacity-0;
+
+            &.--active {
+               @apply
+                  opacity-100 visible;
+
+               height: 44px;
+               width: 44px;
+
+               @screen sm {
+                  height: 48px;
+                  width: 48px
+               }
+
+               svg {
+                  @apply h-4 w-4;
+
+                  @screen sm {
+                     height: 18px;
+                     width: 18px
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -7,13 +7,19 @@
 <link rel="stylesheet" href="assets/css/app.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.4/dist/medium-zoom.min.js"></script>
 
-<body class="antialiased flex flex-col font-sans leading-normal min-h-screen">
-   <div class="bg-white fixed w-full border-b border-gray-300">
-      <header class="container  |  flex items-center justify-between  | py-5 sm:py-6">
-         <a href="/" class="block  |  font-serif">
-            <h1 class="text-sm sm:text-base tracking-wide">Trevor Taylor</h1>
-            <h2 class="text-xs sm:text-sm tracking-wide" style="letter-spacing: 0.0125em">Experience Developer–Designer</h2>
+
+
+<body class="antialiased flex flex-col font-sans leading-normal min-h-screen  |  page --{{ page.title | downcase }}">
+   <header class="site-header" id="top">
+      <div class="site-header__wrapper  |  container">
+         <a href="/" class="site-header__home">
+            <h1 class="text-sm sm:text-base tracking-wide">
+               Trevor Taylor<br>
+               <span class="text-xs sm:text-sm  |  block">Experience Developer–Designer</span>
+            </h1>
          </a>
 
          <button class="site-menu__btn  |  js--site-menu__btn" style="width: 36px">
@@ -24,25 +30,34 @@
    		</button>
 
          {% include nav.html %}
-      </header>
-   </div>
+      </div>
+   </header>
 
    <main class="flex-grow">
       {{ content }}
+
+
+      <div class="back-to-top">
+         <div class="container">
+            <div class="back-to-top__wrapper">
+               <a class="back-to-top__btn" id="js--back-to-top__btn" data-scroll href="#top">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                     <path d="M7.5 14.5V.5m-7 7l7-7 7 7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </div>
    </main>
 
-   <footer class="border-t border-gray-300">
-      <div class="container  |  flex items-center justify-between  |  py-5">
-         <a href="#">
-            hello@trevor-taylor.com
-         </a>
-
-         <a href="#">
-            Instagram
-         </a>
-      </div>
-   </footer>
+   {% include footer.html %}
 
    <!--   JS   -->
    <script src="assets/js/site.js"></script>
+   <script>
+      var scroll = new SmoothScroll('[data-scroll]');
+   </script>
+   <script>
+      mediumZoom('[data-zoomable]')
+   </script>
 </body>

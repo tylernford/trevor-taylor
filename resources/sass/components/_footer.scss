@@ -1,0 +1,84 @@
+//
+// Footer
+//
+
+footer {
+   ul {
+      @apply
+         flex flex-wrap
+         font-serif text-sm;
+
+      @screen sm {
+         @apply justify-end
+      }
+
+      @screen lg {
+         @apply text-base
+      }
+
+      li {
+         margin-right: 12px;
+
+         @screen sm {
+            margin: 0 0 0 10px;
+         }
+
+         @screen lg {
+            margin-left: 12px
+         }
+
+         &:first-child {
+            @screen sm {
+               margin-left: 0
+            }
+         }
+      }
+
+      span {
+         margin-right: 10px;
+
+         @screen sm {
+            margin: 0 0 0 12px;
+         }
+
+         @screen lg {
+            margin-left: 14px
+         }
+      }
+   }
+
+   .footer-mark {
+      @apply
+         h-3 w-3
+         mb-1
+         rounded-full;
+
+      margin-right: -2px;
+
+      @screen sm {
+         @apply
+            h-4 w-4
+            mb-0
+      }
+
+      &.--index {
+         @apply bg-sand-base
+      }
+
+      &.--processes {
+         @apply bg-yellow-base
+      }
+
+      &.--development {
+         @apply bg-blue-base
+      }
+
+      &.--design {
+         @apply bg-orange-base
+      }
+
+      &.--innovation {
+         @apply bg-green-base
+      }
+   }
+}

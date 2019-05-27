@@ -15,6 +15,10 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
+      sand: {
+         '400': 'rgba(229, 225, 220,.25)',
+         base: '#e5e1dc',
+      },
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -139,9 +143,11 @@ module.exports = {
       '4': '1rem',
       '5': '1.25rem',
       '6': '1.5rem',
+      '7': '1.75rem',
       '8': '2rem',
       '10': '2.5rem',
       '12': '3rem',
+      '14': '3.5rem',
       '16': '4rem',
       '20': '5rem',
       '24': '6rem',

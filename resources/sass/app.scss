@@ -12,8 +12,12 @@
 @import 'base/fonts';
 
 // Components
+@import 'components/site-header';
+@import 'components/nav';
+@import 'components/footer';
+@import 'components/back-to-top';
+@import 'components/block--section';
 @import 'components/image-grid';
 
 
 @import 'index';
-@import 'nav';

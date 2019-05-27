@@ -2,20 +2,53 @@
 // Image Grid
 //
 
+.image-grid__section {
+   @apply pb-24
+}
+
 .image-grid {
-   @apply pt-20 pb-24;
+   @apply pb-24;
 
    @screen sm {
-      @apply pt-30 pb-32
+      @apply pb-32
    }
 
-   .image-grid__heading {
-      @apply
-         font-500 tracking-wide uppercase
-         mb-4;
+   .image-grid__header {
+      .image-grid__heading {
+         @apply
+            font-500 tracking-wide uppercase
+            max-w-2xl
+            mx-auto mb-4;
 
-      @screen sm {
-         @apply mb-8
+         @screen sm {
+            @apply mb-8
+         }
+      }
+
+      div {
+         @apply
+            max-w-2xl
+            mx-auto mb-8;
+
+         @screen sm {
+            @apply mb-12
+         }
+
+         p {
+            @apply mb-4;
+
+            &:first-child {
+               @apply -mt-2;
+
+               @screen sm {
+                  @apply -mt-6
+               }
+            }
+
+            &:last-child {
+               @apply mb-0
+            }
+         }
       }
    }
 
@@ -29,21 +62,47 @@
       .image-grid__group {
          @apply
             flex flex-col-reverse
-            -mx-1;
+            -mx-2;
 
          @screen sm {
             @apply
                flex-row
-               -mx-2
          }
 
-         &:nth-child(2) {
+         &.--reverse {
             @apply flex-col;
 
             @screen sm {
                @apply flex-row
             }
          }
+
+         .image-grid__item {
+            @apply flex;
+
+            @screen sm {
+               @apply
+                  block
+                  w-1/3
+            }
+
+            &.--large {
+               @screen sm {
+                  @apply w-2/3
+               }
+            }
+         }
+      }
+   }
+
+
+   .image-grid__image {
+      @apply
+         bg-sand-400
+         p-3;
+
+      @screen sm {
+         @apply p-4
       }
    }
 }

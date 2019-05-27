@@ -1,0 +1,61 @@
+//
+// Block - Section
+//
+
+.section-block {
+   @apply mb-24 pt-20 pb-24;
+
+   @screen sm {
+      @apply mb-32 pt-30 pb-32
+   }
+
+   // Heading
+   .section-block__heading {
+      @apply
+         font-500 tracking-wide uppercase
+         max-w-2xl
+         mx-auto mb-2
+   }
+
+   h3 {
+      @apply
+         max-w-2xl
+         mx-auto
+   }
+   
+   p {
+      @apply
+         max-w-2xl
+         mx-auto mb-4;
+
+      &:last-child {
+         @apply mb-0
+      }
+   }
+}
+
+.page {
+   &.--processes {
+      .section-block {
+         @apply bg-yellow-base
+      }
+   }
+
+   &.--development {
+      .section-block {
+         @apply bg-blue-base
+      }
+   }
+
+   &.--design {
+      .section-block {
+         @apply bg-orange-base
+      }
+   }
+
+   &.--innovation {
+      .section-block {
+         @apply bg-green-base
+      }
+   }
+}

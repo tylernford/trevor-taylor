@@ -21,6 +21,33 @@
    }
 }
 
+.site-menu-secondary__btn {
+   margin-right: -12px;
+
+   div {
+      @apply
+         flex flex-wrap justify-end
+         py-2 px-1;
+
+      &:hover {
+         span {
+            @apply bg-gray-600
+         }
+      }
+   }
+
+   span {
+      @apply
+         bg-gray-300
+         h-px
+         mb-1;
+
+      &:last-child {
+         @apply mb-0
+      }
+   }
+}
+
 .site-menu__container {
    @apply absolute invisible inset-0 z-50;
 
