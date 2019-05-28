@@ -105,4 +105,23 @@
          @apply p-4
       }
    }
+
+
+
+
+
+
+
+   .image-grid__wrapper {
+      @apply relative;
+      padding-top: 100%;
+
+      .image-grid__image {
+         @apply absolute inset-0;
+      }
+
+      .image-grid__image img {
+         max-height: 100%
+      }
+   }
 }

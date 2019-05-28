@@ -2,7 +2,11 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Trevor Taylor | New Theme</title>
+<title>Trevor Taylor {% unless page.title == 'Index' %}| {{ page.title }} {% endunless %}</title>
+
+<link rel="canonical" href="https://trevor-taylor.com" />
+<meta name="description" content="Trevor Taylor is an experience developer working at the intersection of design and education." />
+<meta name="robots" content="all" />
 
 <link rel="stylesheet" href="assets/css/app.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600&display=swap" rel="stylesheet">
@@ -13,41 +17,10 @@
 
 
 <body class="antialiased flex flex-col font-sans leading-normal min-h-screen  |  page --{{ page.title | downcase }}">
-   <header class="site-header" id="top">
-      <div class="site-header__wrapper  |  container">
-         <a href="/" class="site-header__home">
-            <h1 class="text-sm sm:text-base tracking-wide">
-               Trevor Taylor<br>
-               <span class="text-xs sm:text-sm  |  block">Experience Developer–Designer</span>
-            </h1>
-         </a>
-
-         <button class="site-menu__btn  |  js--site-menu__btn" style="width: 36px">
-            <span style="width: 24px"></span>
-            <span style="width: 28px"></span>
-            <span style="width: 24px"></span>
-            <span style="width: 18px"></span>
-   		</button>
-
-         {% include nav.html %}
-      </div>
-   </header>
+   {% include header.html %}
 
    <main class="flex-grow">
       {{ content }}
-
-
-      <div class="back-to-top">
-         <div class="container">
-            <div class="back-to-top__wrapper">
-               <a class="back-to-top__btn" id="js--back-to-top__btn" data-scroll href="#top">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                     <path d="M7.5 14.5V.5m-7 7l7-7 7 7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-               </a>
-            </div>
-         </div>
-      </div>
    </main>
 
    {% include footer.html %}
@@ -58,6 +31,8 @@
       var scroll = new SmoothScroll('[data-scroll]');
    </script>
    <script>
-      mediumZoom('[data-zoomable]')
+      mediumZoom('[data-zoomable]', {
+         margin: 24
+      })
    </script>
 </body>

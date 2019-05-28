@@ -8827,7 +8827,7 @@ button:focus, button:active {
   border-left: 1px solid #e2ded9;
 }
 
-.site-menu__wrapper .site-menu.\--processes {
+.site-menu__wrapper .site-menu.\--skills {
   background-color: #eaba50;
 }
 
@@ -8925,7 +8925,7 @@ footer .footer-mark.\--index {
   background-color: #e5e1dc;
 }
 
-footer .footer-mark.\--processes {
+footer .footer-mark.\--skills {
   background-color: #eaba50;
 }
 
@@ -9263,6 +9263,23 @@ footer .footer-mark.\--innovation {
   }
 }
 
+.image-grid .image-grid__wrapper {
+  position: relative;
+  padding-top: 100%;
+}
+
+.image-grid .image-grid__wrapper .image-grid__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.image-grid .image-grid__wrapper .image-grid__image img {
+  max-height: 100%;
+}
+
 .page-header {
   margin-top: 64px;
 }
@@ -9312,7 +9329,7 @@ footer .footer-mark.\--innovation {
   }
 }
 
-.index-list .index-list__item .index-list__item__indicator.\--processes {
+.index-list .index-list__item .index-list__item__indicator.\--skills {
   background-color: #eaba50;
 }
 
