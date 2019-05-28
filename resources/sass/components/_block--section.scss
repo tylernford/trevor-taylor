@@ -22,7 +22,7 @@
          max-w-2xl
          mx-auto
    }
-   
+
    p {
       @apply
          max-w-2xl
@@ -35,7 +35,7 @@
 }
 
 .page {
-   &.--processes {
+   &.--skills {
       .section-block {
          @apply bg-yellow-base
       }
