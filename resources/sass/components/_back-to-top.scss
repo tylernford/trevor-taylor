@@ -29,11 +29,6 @@
 
          margin-right: -2px;
 
-         @screen sm {
-            height: 48px;
-            width: 48px
-         }
-
          .back-to-top__btn {
             @apply
                flex items-center justify-center
@@ -67,18 +62,8 @@
                height: 44px;
                width: 44px;
 
-               @screen sm {
-                  height: 48px;
-                  width: 48px
-               }
-
                svg {
-                  @apply h-4 w-4;
-
-                  @screen sm {
-                     height: 18px;
-                     width: 18px
-                  }
+                  @apply h-4 w-4
                }
             }
          }

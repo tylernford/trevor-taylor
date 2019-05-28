@@ -8985,13 +8985,6 @@ footer .footer-mark.\--innovation {
   margin-right: -2px;
 }
 
-@media (min-width: 640px) {
-  .back-to-top div .back-to-top__wrapper {
-    height: 48px;
-    width: 48px;
-  }
-}
-
 .back-to-top div .back-to-top__wrapper .back-to-top__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9047,23 +9040,9 @@ footer .footer-mark.\--innovation {
   width: 44px;
 }
 
-@media (min-width: 640px) {
-  .back-to-top div .back-to-top__wrapper .back-to-top__btn.\--active {
-    height: 48px;
-    width: 48px;
-  }
-}
-
 .back-to-top div .back-to-top__wrapper .back-to-top__btn.\--active svg {
   height: 1rem;
   width: 1rem;
-}
-
-@media (min-width: 640px) {
-  .back-to-top div .back-to-top__wrapper .back-to-top__btn.\--active svg {
-    height: 18px;
-    width: 18px;
-  }
 }
 
 .section-block {
