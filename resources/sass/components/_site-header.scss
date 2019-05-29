@@ -1,0 +1,30 @@
+//
+// Site Header
+//
+
+.site-header {
+   @apply
+
+      bg-white border-b border-gray-300
+      w-full;
+
+   .site-header__wrapper {
+      @apply
+         flex items-center justify-between
+         py-5;
+
+      @screen sm {
+         @apply py-6
+      }
+
+      .site-header__home {
+         @apply
+            block
+            font-serif
+      }
+
+      button {
+
+      }
+   }
+}

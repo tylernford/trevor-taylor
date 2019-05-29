@@ -1,0 +1,50 @@
+<!--   Site Menu Container   -->
+<div class="site-menu__container">
+   <!--   Opacity Overlay   -->
+   <div class="site-menu__overlay"></div>
+
+   <!--   Fox Icon  -->
+   {% include fox.html %}
+
+   <!--   Site Menu Wrapper   -->
+   <div class="site-menu__wrapper">
+      <!--   Site Menu   -->
+      <nav class="site-menu  --{{ page.title | downcase }}">
+         <!--   Close Button   -->
+         <button class="js--site-menu__close-btn">Close</button>
+
+         <!--   Menu List   -->
+         <ul class="site-menu__list">
+            {% assign index = site.pages | sort: "order"%}
+            {% for page in index %}
+               {% unless page.title == 'Index' %}
+                  <li class="site-menu__item">
+                     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                  </li>
+               {% endunless %}
+            {% endfor %}
+         </ul>
+
+         <div class="py-12">
+            <div class="mb-8">
+               <p>
+                  <a href="mailto:hello@trevor-taylor.com">hello@trevor-taylor.com</a>
+               </p>
+
+               <p>
+                  <a href="https://instagram.com/fairweatherfaux" target="_blank">Instagram</a>
+               </p>
+            </div>
+
+            <div class="text-sm">
+               <p>Website designed and developed by <a class="font-500" style="white-space: nowrap;" href="https://tylernford.com" target="_blank">Tyler N. Ford <span class="text-xs">↗︎</span></a></p>
+
+               <p>Typography features <a href="http://weiweihuanghuang.github.io/Work-Sans/" target="_blank">Work Sans</a> and <a href="https://www.myfonts.com/fonts/bitstream/cooper" target="_blank">Cooper BT</a></p>
+            </div>
+         </div>
+
+         <!--   Fox Icon  -->
+         {% include fox.html %}
+      </nav>
+   </div>
+</div>

@@ -1,0 +1,258 @@
+//
+// Nav
+//
+
+/* purgecss start ignore */
+.site-menu__btn {
+   @apply
+      flex flex-wrap justify-end
+      -mr-1 py-2 px-1;
+
+   &:hover {
+      span {
+         @apply bg-gray-600
+      }
+   }
+
+   span {
+      @apply
+         bg-black
+         h-px
+         mb-1
+   }
+}
+
+.site-menu-secondary__btn {
+   margin-right: -12px;
+
+   div {
+      @apply
+         flex flex-wrap justify-end
+         py-2 px-1;
+
+      &:hover {
+         span {
+            @apply bg-gray-600
+         }
+      }
+   }
+
+   span {
+      @apply
+         bg-gray-300
+         h-px
+         mb-1;
+
+      &:last-child {
+         @apply mb-0
+      }
+   }
+}
+
+.site-menu__container {
+   @apply absolute invisible inset-0 z-50;
+
+   // Opacity Overlay
+   .site-menu__overlay {
+      @apply fixed bg-white inset-0 opacity-0;
+      @apply timing-1 duration-4 property-all;
+
+      @screen sm {
+         @apply duration-5
+      }
+
+      @screen md {
+         transition-duration: 1.5s;
+      }
+   }
+
+   svg {
+      @apply
+         opacity-0
+         duration-3;
+   }
+
+   // Menu Wrapper
+   .site-menu__wrapper {
+      @apply flex justify-end fixed inset-0 z-40;
+      @apply translateX-100per timing-1 duration-4 property-all;
+
+      @screen sm {
+         @apply duration-5
+      }
+
+      @screen md {
+         transition-duration: 1.5s;
+      }
+   }
+
+   // When Visible
+   &.--is-visible {
+      @apply visible;
+
+      // Opacity Overlay
+      .site-menu__overlay {
+         @apply opacity-75;
+         @apply timing-1 duration-4 property-all;
+      }
+
+      svg {
+         @apply opacity-100;
+         @apply timing-1 duration-5 property-all;
+      }
+
+      // Menu Wrapper
+      .site-menu__wrapper {
+         @apply translateX-0per timing-1 duration-4 property-all;
+      }
+   }
+}
+
+.site-menu__container {
+   svg {
+      @apply hidden;
+
+      @screen sm {
+         @apply
+            fixed
+            block;
+         height: 64px;
+         width: 40px;
+         bottom: 48px;
+         left: 48px;
+      }
+   }
+}
+
+.site-menu__wrapper {
+   // Site Menu
+   .site-menu {
+      @apply
+         relative
+         overflow-scroll
+         flex flex-col justify-start
+         h-full w-full
+         pt-20 pb-8 px-8
+         shadow-xl;
+
+      @screen sm {
+         @apply pt-32 px-16;
+         max-width: 30rem
+      }
+
+      @screen md {
+         max-width: 34rem
+      }
+
+      // Close Button
+      button {
+         @apply absolute;
+
+         right: 2rem;
+         top: 2rem;
+
+         @screen md {
+            right: 4rem;
+            top: 3.5rem
+         }
+
+         &:hover {
+            @apply opacity-50
+         }
+      }
+
+      // Menu
+      .site-menu__list {
+         @apply
+            border-b border-black
+            w-full
+            pb-8;
+
+         // Menu Item
+         .site-menu__item {
+            @apply
+               font-serif text-3xl tracking-wide;
+
+            @screen sm {
+               @apply
+                  text-4xl
+                  py-2
+            }
+
+            a {
+               &:hover {
+                  @apply text-black opacity-75
+               }
+
+               &:after {
+                  content: '→';
+                  @apply
+                     invisible opacity-0
+                     font-serif text-4xl
+                     ml-1;
+               }
+
+               &:hover {
+                  &:after {
+                     @apply
+                     ml-4
+                        visible opacity-100
+                        timing-1 duration-3 property-margin;
+                  }
+               }
+            }
+         }
+      }
+
+      a {
+         &:hover {
+            @apply
+               text-black
+               opacity-50
+         }
+      }
+
+      svg {
+         @apply
+            block;
+            flex-shrink:0;
+         height: 57px;
+         width: 36px;
+
+         @media screen and (min-height: 672px) {
+            @apply absolute;
+            bottom: 48px;
+            height: 57px;
+            width: 36px;
+         }
+
+         @screen sm {
+            @apply hidden
+         }
+      }
+   }
+
+   // Colors
+   .site-menu {
+      &.--index {
+         background-color: #e5e1dc;
+         border-left: 1px solid #e2ded9;
+      }
+      &.--skills {
+         @apply bg-yellow-base
+      }
+
+      &.--development {
+         @apply bg-blue-base
+      }
+
+      &.--design {
+         @apply bg-orange-base
+      }
+
+      &.--innovation {
+         @apply bg-green-base
+      }
+   }
+}
+/* purgecss end ignore */

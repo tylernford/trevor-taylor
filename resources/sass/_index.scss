@@ -1,0 +1,124 @@
+//
+// Index List Hover
+//
+
+/* purgecss start ignore */
+.page-header {
+   margin-top: 64px;
+
+   @screen sm {
+      margin-top: 96px
+   }
+
+   @screen md {
+      margin-top: 128px
+   }
+}
+
+.index-list {
+   .index-list__item {
+      @apply
+         flex items-center
+         border-b border-gray-300
+         py-5;
+
+      .index-list__item__indicator {
+         @apply
+            h-8 w-8
+            rounded-full;
+
+         @screen sm {
+            @apply h-10 w-10
+         }
+
+         @screen md {
+            @apply h-12 w-12
+         }
+
+         &.--skills {
+            @apply bg-yellow-base
+         }
+
+         &.--development {
+            @apply bg-blue-base
+         }
+
+         &.--design {
+            @apply bg-orange-base
+         }
+
+         &.--innovation {
+            @apply bg-green-base
+         }
+      }
+
+      span {
+         @apply
+            font-300 leading-none subpixel-antialiased text-2xl tracking-wide
+            ml-4;
+
+         @screen sm {
+            @apply
+               text-3xl
+               ml-6
+         }
+
+         @screen md {
+            @apply
+               ml-8
+         }
+      }
+   }
+}
+
+.index-list {
+   .index-list__item {
+      @apply timing-1 duration-3 property-all;
+      > div {
+         @apply timing-1 duration-3 property-all;
+      }
+   }
+
+   &:hover {
+      > .index-list__item {
+         @apply
+            text-gray-500
+            duration-2;
+
+         &:hover {
+            color: black
+         }
+
+         > div {
+            @apply
+               bg-gray-400
+               duration-2;
+         }
+      }
+   }
+
+   .index-list__item {
+      &:after {
+         content: '→';
+         @apply
+            invisible opacity-0
+            inline-block
+            font-300 font-serif text-2xl
+            -mt-1 ml-1
+            timing-1 duration-3 property-margin;
+
+         @screen sm {
+            @apply text-3xl
+         }
+      }
+
+      &:hover {
+         &:after {
+            @apply
+               visible opacity-100
+               ml-4
+         }
+      }
+   }
+}
+/* purgecss end ignore */

@@ -1,0 +1,12 @@
+//
+// Buttons
+//
+
+button {
+   @apply timing-1 duration-2 property-all;
+
+   &:focus,
+   &:active {
+      outline: none
+   }
+}
