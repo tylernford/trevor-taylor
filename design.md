@@ -1,4 +1,0 @@
----
-title: Design
-layout: design
----
