@@ -6,4 +6,4 @@ title: Index
 layout: pages/home
 ---
 
-I am an experience developer working at the intersection of design and learning
+I am an experience developer working at the intersection of design and learning.
