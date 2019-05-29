@@ -212,6 +212,17 @@
          }
       }
 
+      .site-menu__credits {
+         @apply hidden;
+
+         @media screen and (min-height: 672px) {
+            @apply
+               block
+               text-sm
+               mt-8
+         }
+      }
+
       svg {
          @apply
             block;
@@ -219,7 +230,7 @@
          height: 57px;
          width: 36px;
 
-         @media screen and (min-height: 672px) {
+         @media screen and (min-height: 590px) {
             @apply absolute;
             bottom: 48px;
             height: 57px;
@@ -254,5 +265,13 @@
          @apply bg-green-base
       }
    }
+}
+
+
+
+// Disable Body Scroll When Menu Is Open
+.--noScroll {
+   @apply absolute inset-0;
+   overflow: hidden;
 }
 /* purgecss end ignore */
