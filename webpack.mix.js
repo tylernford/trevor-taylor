@@ -27,11 +27,9 @@ if (mix.inProduction()) {
     mix.purgeCss({
         enabled: true,
         globs: [
-            path.join(__dirname, 'layouts/*.html'),
-            //path.join(__dirname, 'templates/*.html'),
-            //path.join(__dirname, 'templates/**/*.html'),
-            //path.join(__dirname, 'partials/*.html'),
-            //path.join(__dirname, 'partials/**/*.html'),
+            path.join(__dirname, '_layouts/*.html'),
+            path.join(__dirname, '_layouts/**/*.html'),
+            path.join(__dirname, '_includes/*.html'),
             path.join(__dirname, 'js/**.js'),
             path.join(__dirname, 'img/**.svg'),
         ],
