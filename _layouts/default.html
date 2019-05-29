@@ -4,31 +4,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Trevor Taylor {% unless page.title == 'Index' %}| {{ page.title }} {% endunless %}</title>
 
-<link rel="canonical" href="https://trevor-taylor-staging.netlify.com" />
+<link rel="canonical" href="https://trevor-taylor.com" />
 <meta name="description" content="Trevor Taylor is an experience developer working at the intersection of design and education." />
 <meta name="robots" content="all" />
 
 <link rel="icon" type="image/png" href="assets/favicon--{% if page.title == 'Skills' %}yellow{% elsif page.title == 'Development' %}blue{% elsif page.title == 'Design' %}orange{% elsif page.title == 'Innovation' %}green{% else %}sand{% endif %}.png" sizes="32x32" />
 
-
+<!--   Twitter Sharing   -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Trevor Taylor - Experience Developer&ndash;Designer">
 <meta name="twitter:description" content="Trevor Taylor is an experience developer working at the intersection of design and education.">
-<meta name="twitter:image" content="https://trevor-taylor-staging.netlify.com/assets/twitter_share.png">
-
+<meta name="twitter:image" content="https://trevor-taylor.com/assets/twitter_share.png">
 
 <!-- Facebook Sharing -->
-<meta property="og:url" content="https://trevor-taylor-staging.netlify.com" />
+<meta property="og:url" content="https://trevor-taylor.com" />
 <meta property="og:title" content="Trevor Taylor - Experience Developer&ndash;Designer" />
 <meta property="og:description" content="Trevor Taylor is an experience developer working at the intersection of design and education." />
-<meta property="og:image" content="https://trevor-taylor-staging.netlify.com/assets/facebook_share.png" />
+<meta property="og:image" content="https://trevor-taylor.com/assets/facebook_share.png" />
 
 
 <link rel="stylesheet" href="assets/css/app.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.4/dist/medium-zoom.min.js"></script>
+{% unless page.title == 'Index' %}
+   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.4/dist/medium-zoom.min.js"></script>
+{% endunless %}
 
 
 
@@ -47,10 +48,11 @@
    <script src="assets/js/site.js"></script>
    <script>
       var scroll = new SmoothScroll('[data-scroll]');
-   </script>
-   <script>
-      mediumZoom('[data-zoomable]', {
-         margin: 24
-      })
+
+      {% unless page.title == 'Index' %}
+         mediumZoom('[data-zoomable]', {
+            margin: 24
+         })
+      {% endunless %}
    </script>
 </body>
