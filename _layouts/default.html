@@ -26,7 +26,6 @@
 <link rel="stylesheet" href="assets/css/app.css">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 {% unless page.title == 'Index' %}
    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.4/dist/medium-zoom.min.js"></script>
 {% endunless %}
@@ -47,6 +46,7 @@
    <!--   JS   -->
    <script src="assets/js/site.js"></script>
    <script>
+      {% include js/smooth-scroll.html %}
       var scroll = new SmoothScroll('[data-scroll]');
 
       {% unless page.title == 'Index' %}
